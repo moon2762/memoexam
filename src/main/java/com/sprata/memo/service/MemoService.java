@@ -5,6 +5,7 @@ import com.sprata.memo.dto.MemoResponseDto;
 import com.sprata.memo.entity.Memo;
 import com.sprata.memo.repository.MemoRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+
 import java.util.List;
 
 public class MemoService {
