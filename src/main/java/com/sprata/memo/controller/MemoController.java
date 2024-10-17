@@ -3,7 +3,6 @@ package com.sprata.memo.controller;
 import com.sprata.memo.dto.MemoRequestDto;
 import com.sprata.memo.dto.MemoResponseDto;
 import com.sprata.memo.service.MemoService;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,11 +10,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class MemoController {
-
+// memocontroller _ memoservice > memorepository 로 흐름(강한결합)
     private final MemoService memoService;
 
-    public MemoController(JdbcTemplate jdbcTemplate) {
-        this.memoService = new MemoService(jdbcTemplate);
+    public MemoController(MemoService memoService) {
+        this.memoService = memoService;
     }
 
     @PostMapping("/memos")
