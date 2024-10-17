@@ -4,15 +4,18 @@ import com.sprata.memo.dto.MemoRequestDto;
 import com.sprata.memo.dto.MemoResponseDto;
 import com.sprata.memo.entity.Memo;
 import com.sprata.memo.repository.MemoRepository;
-
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-public class MemoService {
+@Component
+
+public class MemoService { // MemoService
+
 
     private final MemoRepository memoRepository;
 
-    public MemoService(MemoRepository memoRepository) {
+    public MemoService(MemoRepository memoRepository) { // 생성자 주입을 주로 사용하고 하나의 생성자만 존재할 경우 @Autowird를 생략 가능하다
         this.memoRepository = memoRepository;
     }
 
