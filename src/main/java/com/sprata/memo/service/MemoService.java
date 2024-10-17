@@ -4,11 +4,16 @@ import com.sprata.memo.dto.MemoRequestDto;
 import com.sprata.memo.dto.MemoResponseDto;
 import com.sprata.memo.entity.Memo;
 import com.sprata.memo.repository.MemoRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+// @Component // 빈 객체로 등록하여 의존성 주입이 필요할때 @Autowird를 달아서 알려준다,
+            // 스프링 자체에 Component Scane 이 있음.
+            // ioc 컨테이너를 통해 관리가 되는 빈 클래스만 가능하다
+            // ApplicationContext 를 통해 수동으로 Bean 이름,클래스 형식으로 가져올수 있다.
+
+@Service // Service 클래스 안에 Component가 있음
 
 public class MemoService { // MemoService
 
