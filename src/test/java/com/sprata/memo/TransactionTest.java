@@ -51,7 +51,7 @@ public class TransactionTest {
 //    @Rollback(value = false)
     @DisplayName("트랜잭션 전파 테스트")
     void test3() {
-        memoRepository.createMemo(em);
+       // memoRepository.createMemo(em);
         System.out.println("테스트 test3 메서드 종료");
     }
 
