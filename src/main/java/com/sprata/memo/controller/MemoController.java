@@ -31,13 +31,13 @@ public class MemoController {
 
     @PutMapping("/memos/{id}")
     public Long updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
-        return memoService.updateMemos(id,requestDto);
+        return memoService.updateMemo(id,requestDto);
     }
 
 
     @DeleteMapping("/memos/{id}")
     public Long deleteMemo(@PathVariable Long id) {
-        return memoService.deleteMemos(id);
+        return memoService.deleteMemo(id);
     }
 
 }
