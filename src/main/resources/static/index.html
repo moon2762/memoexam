@@ -12,6 +12,13 @@
     <style>
         @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+
+
         body {
             margin: 0px;
         }
@@ -392,6 +399,12 @@
             공유하고 싶은 소식을 입력해주세요.
         </p>
     </div>
+
+    <form action="/api/memos/contents" method="get">
+        <input class="search-bar" type="text" name="keyword" placeholder="검색어를 입력하세요">
+        <button class="search-button" type="submit">검색</button>
+    </form>
+
     <div class="area-write">
         <textarea class="field" placeholder="공유하고 싶은 소식을 입력해주세요" name="contents" id="contents" cols="30"
                   rows="10"></textarea>
