@@ -11,7 +11,7 @@ public interface MemoRepository extends JpaRepository<Memo, Long> {
 
     List<Memo> findAllByOrderByModifiedAtDesc(); // Desc 내림차순
 
-    List<Memo> findByContentsContaining(String keyword);
+    List<Memo> finAllByContentsContainsOrderByModifiedAtDesc(String keyword);
 
 }
 

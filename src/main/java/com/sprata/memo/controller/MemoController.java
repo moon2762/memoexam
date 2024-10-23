@@ -23,10 +23,15 @@ public class MemoController {
     }
 
 
-
     @GetMapping("/memos")
     public List<MemoResponseDto> getMemos() {
         return memoService.getMemos();
+    }
+
+    @GetMapping("/memos/contents")
+    public List<MemoResponseDto> getMemosContents(@RequestParam String keyword) {
+        return memoService.getMemosByKeyword(keyword);
+
     }
 
     @PutMapping("/memos/{id}")
@@ -38,12 +43,6 @@ public class MemoController {
     @DeleteMapping("/memos/{id}")
     public Long deleteMemo(@PathVariable Long id) {
         return memoService.deleteMemo(id);
-    }
-
-    @GetMapping("/memos/contents")
-    public List<MemoResponseDto> getMemosContents(@RequestParam String keyword) {
-        return memoService.getMemosByKeyword(keyword);
-
     }
 
 }

@@ -70,7 +70,8 @@ public class MemoService {
 
     public List<MemoResponseDto> getMemosByKeyword(String keyword) {
 
-        return memoRepository.findByContentsContaining(keyword).stream().map(MemoResponseDto::new).toList();
+        return memoRepository.finAllByContentsContainsOrderByModifiedAtDesc(keyword)
+                .stream().map(MemoResponseDto::new).toList();
 
     }
 
